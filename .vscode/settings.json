@@ -1,4 +1,12 @@
 {
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__/**": true
+    },
     "python.autoComplete.extraPaths": [
         "lib/python3.8/site-packages",
         "install/moveit_msgs/lib/python3.8/site-packages",
