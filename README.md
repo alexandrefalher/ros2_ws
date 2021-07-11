@@ -41,21 +41,21 @@ For that: Ctrl + B and select the "build ros2_dummy_pkg" task.
 I assume now that you have launched the ros2_dummy_pkg's node: node (didn't see that comming don't you ! :p)
 
 ## Topics
-/dummy_node__pub : the topic the node will print to each second. The published message is "dummy node is publishing !"
-/dummy_node__sub : the topic the node is listening
+/rustdds_topic : the topic the node will print to each second. The published message is "dummy node is publishing !"
+/rustdds_topic : the topic the node is listening
 
 ## The logs
 The node automatically prints logs when receiving a message on the topic he's listening.
 
 ## CLI commands
-### Listening /dummy_node__pub topic
+### Listening /rustdds_topic topic
 ```
-ros2 topic echo /dummy_node__pub
+ros2 topic echo /rustdds_topic
 ```
 
-### Sending to /dummy_node__sub topic
+### Sending to /rustdds_topic topic
 ```
-ros2 topic pub /dummy_node__sub example_interfaces/msg/String "data: hi!"
+ros2 topic pub /rustdds_topic example_interfaces/msg/String "data: hi!"
 ```
 
 # Deployment
