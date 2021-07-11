@@ -5,7 +5,7 @@ This repository is a POC for establishing the feasability of a communication bet
 I assume that you already installed ROS 2 Foxy, colcon and you have sourced the correct script (often /opt/ros2/foxy/setup.bash).
 I'm using Visual Studio Code and Python 3.x.x, the .vscode will help you having correct path to the needed python ressources, essentially for vscode intellisense.
 
-For the steps below, i assule you are in the root directory.
+For the steps below, i assume you are in the root directory.
 
 ## Compile
 ```
@@ -55,7 +55,7 @@ ros2 topic echo /dummy_node__pub
 
 ### Sending to /dummy_node__sub topic
 ```
-ros2 topic pub /dummy_node__sub example_interfaces/String "data: hi!"
+ros2 topic pub /dummy_node__sub example_interfaces/msg/String "data: hi!"
 ```
 
 # Deployment
