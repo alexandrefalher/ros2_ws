@@ -8,6 +8,7 @@ from example_interfaces.msg import String
 class DummyNode(Node):
     def __init__(self):
         super().__init__("dummy_node")
+        self.declare_parameter("my_param_10", "something!")
         self.publisher = self.create_publisher(String, "rustdds_topic", 10)
         self.subscription = self.create_subscription(String, "rustdds_topic", self.callback_subscription, 10)
         self.timer = self.create_timer(1, self.publish)
