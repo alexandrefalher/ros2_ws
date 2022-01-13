@@ -30,15 +30,15 @@ class DummyNode(Node):
         self.timer_param = self.create_timer(2, self.change_param)
         self.get_logger().info("dummy node initialized")
         self.param_toggle = True
-        
+
     def publish(self):
         msg = String()
         msg.data = "dummy node is publishing !"
         self.publisher.publish(msg)
-    
+
     def callback_subscription(self, msg):
         self.get_logger().info(msg.data)
-    
+
     def change_param(self):
         my_param_value = ""
         if self.param_toggle:

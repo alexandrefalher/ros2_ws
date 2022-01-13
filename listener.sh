@@ -1,8 +1,3 @@
-#!/usr/bin/bash
-
-colcon build --packages-select ros2_dummy_pkg --symlink-install --cmake-args -DFASTDDS_STATISTICS=ON
-source install/local_setup.bash
-
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 export FASTDDS_STATISTICS="HISTORY_LATENCY_TOPIC;NETWORK_LATENCY_TOPIC;PUBLICATION_THROUGHPUT_TOPIC;\
@@ -11,4 +6,4 @@ HEARTBEAT_COUNT_TOPIC;ACKNACK_COUNT_TOPIC;NACKFRAG_COUNT_TOPIC;\
 GAP_COUNT_TOPIC;DATA_COUNT_TOPIC;RESENT_DATAS_TOPIC;SAMPLE_DATAS_TOPIC;\
 PDP_PACKETS_TOPIC;EDP_PACKETS_TOPIC;DISCOVERY_TOPIC;PHYSICAL_DATA_TOPIC"
 
-ros2 run ros2_dummy_pkg node
+ros2 run demo_nodes_cpp listener
